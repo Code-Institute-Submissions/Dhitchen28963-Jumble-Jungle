@@ -1,9 +1,7 @@
-/* Background image for the main menu */
-.main-menu {
-  background-image: url('../images/jumble-jungle-main-menu.image.webp');
-  background-size: cover;
+.background-image {
+  background-image: url('../images/jumble-jungle-background.webp');
   background-position: center;
-  height: 100vh;
+  height: auto;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -13,7 +11,20 @@
 body {
   margin: 0;
   padding: 0;
+  border: 10px solid green;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
+}
+
+/* Styling for Main Menu icons which consist of Play, Leaderboard and Help */
+.fas {
+  font-size: 60px;
+}
+
+/* Margin to the first and last font awesome icons */
+.nav-list li:first-child i,
+.nav-list li:last-child i {
+  margin: 0 30px; /* Adjust the space around the icons */
 }
 
 /* Style the list */
@@ -21,15 +32,14 @@ body {
   list-style: none;
   padding: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
 /* Style the navigation icons */
 .nav-list li {
-  font-size: 70px;
   cursor: pointer;
-  margin-right: 60px;
+  margin-right: 0 50px;
 }
 
 /* Styling for the overlay */
@@ -114,7 +124,27 @@ h1 {
   cursor: pointer;
 }
 
-@media (max-width: 739px) {
+/* Media query: Foldable phones and smaller screen sizes - landcape and portrait */
+@media screen and (min-width: 240px) {
+  .left-image {
+    max-width: 100%;
+    height: 100px;
+  }
+
+  /* Set a specific height to trigger the scrollbar */
+  #helpSection {
+    height: 300px;
+    overflow-y: auto; /* Add vertical scrollbar when content exceeds the height */
+  }
+  
+  /* Reduce the text size inside #helpSection */
+  #helpSection p {
+    font-size: 12px;
+  }
+}
+
+/* Media query: Foldable phones and smaller screen sizes - landcape and portrait */
+@media screen and (max-width: 739px) {
   .box-container {
     display: flex;
     justify-content: space-around;
