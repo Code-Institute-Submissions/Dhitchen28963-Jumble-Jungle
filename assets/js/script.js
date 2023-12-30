@@ -71,3 +71,31 @@ const boxes = document.querySelectorAll('.box');
 const submitBtn = document.getElementById('submit-btn');
 const deleteBtn = document.getElementById('delete-btn');
 let removedLetters = [];
+
+// Function to create letter containers
+function createLetterContainers() {
+  const scrambledLetters = currentWord.scrambled.split('');
+  scrambledLetters.forEach(letter => {
+    const div = document.createElement('div');
+    div.textContent = letter;
+    div.classList.add('letter');
+    div.setAttribute('draggable', true);
+    letterContainer.appendChild(div);
+  });
+}
+
+// Function to setup the game for the next word
+function setupGameForNextWord() {
+  letterContainer.innerHTML = ''; // Clear previous letters
+  boxes.forEach(box => (box.innerHTML = '')); // Clear previous boxes
+
+  currentWordIndex++; // Move to the next word
+  if (currentWordIndex >= words.length) {
+    alert('Congratulations! You have completed all words.'); // Game completed
+    return;
+  }
+
+  currentWord = words[currentWordIndex]; // Set the current word to the next word
+  createLetterContainers(); // Load letters for the next word
+  attachDragAndDropListeners(); // Attach drag-and-drop listeners to the new set of letters
+}
