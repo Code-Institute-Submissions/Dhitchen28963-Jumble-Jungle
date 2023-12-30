@@ -99,3 +99,64 @@ function setupGameForNextWord() {
   createLetterContainers(); // Load letters for the next word
   attachDragAndDropListeners(); // Attach drag-and-drop listeners to the new set of letters
 }
+
+// Function to handle drag-and-drop listeners for the letters
+function attachDragAndDropListeners() {
+  const letters = document.querySelectorAll('.letter');
+
+  letters.forEach(letter => {
+    letter.addEventListener('dragstart', () => {
+      letter.classList.add('dragging');
+    });
+
+    letter.addEventListener('dragend', () => {
+      letter.classList.remove('dragging');
+    });
+
+    letter.addEventListener('click', () => {
+      const targetBox = document.querySelector('.dragging');
+      if (targetBox !== null) {
+        targetBox.textContent = letter.textContent;
+        letter.remove();
+      }
+    });
+  });
+}
+
+createLetterContainers();
+attachDragAndDropListeners(); // Attach drag-and-drop listeners to the initial set of letters
+
+boxes.forEach(box => {
+  box.addEventListener('dragover', e => {
+    e.preventDefault();
+  });
+
+  box.addEventListener('drop', e => {
+    const draggedLetter = document.querySelector('.dragging');
+    if (draggedLetter && box.children.length === 0) {
+      box.appendChild(draggedLetter);
+    }
+  });
+});
+
+submitBtn.addEventListener('click', () => {
+  let formedWord = '';
+  boxes.forEach(box => {
+    if (box.children.length > 0) {
+      formedWord += box.children[0].textContent;
+    }
+  });
+
+  if (formedWord === currentWord.word) {
+    alert('Correct! Move on to the next word.');
+
+    setupGameForNextWord(); // Load the next word
+
+    if (currentWordIndex < words.length) {
+      // Game is completed; You can implement further actions for completing all words here if needed
+      console.log("Load next game here...");
+    }
+  } else {
+    alert('Incorrect! Try again.');
+  }
+});
