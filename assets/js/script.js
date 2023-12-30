@@ -49,3 +49,25 @@ let words = [
 ];
 let currentWordIndex = 0; // Keep track of the current word index
 let currentWord = words[currentWordIndex]; // Initialize with the first word
+
+// Function to display a hint for the current word
+const hintBtn = document.getElementById('hint-btn');
+const hintDisplay = document.getElementById('hint-display');
+
+function displayHint() {
+  if (currentWordIndex < words.length) {
+    hintDisplay.textContent = words[currentWordIndex].hint;
+  } else {
+    hintDisplay.textContent = 'No more hints available.';
+  }
+}
+
+hintBtn.addEventListener('click', () => {
+  displayHint();
+});
+
+const letterContainer = document.getElementById('letter-container');
+const boxes = document.querySelectorAll('.box');
+const submitBtn = document.getElementById('submit-btn');
+const deleteBtn = document.getElementById('delete-btn');
+let removedLetters = [];
