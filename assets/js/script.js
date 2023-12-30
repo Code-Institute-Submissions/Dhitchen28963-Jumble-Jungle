@@ -160,3 +160,70 @@ submitBtn.addEventListener('click', () => {
     alert('Incorrect! Try again.');
   }
 });
+
+// Function to handle deleting the last letter from the boxes
+function deleteLastPlacedLetter() {
+  let lastPlacedLetter = null;
+  let boxWithLastLetter = null;
+
+  // Get the box containing the last placed letter
+  boxes.forEach(box => {
+    const lettersInBox = box.querySelectorAll('.letter');
+    if (lettersInBox.length > 0) {
+      lastPlacedLetter = lettersInBox[lettersInBox.length - 1];
+      boxWithLastLetter = box;
+    }
+  });
+
+  if (lastPlacedLetter !== null && boxWithLastLetter !== null) {
+    boxWithLastLetter.removeChild(lastPlacedLetter); // Remove the last placed letter from the box
+    removedLetters.push(lastPlacedLetter.textContent); // Store the removed letter for restoration
+    letterContainer.appendChild(lastPlacedLetter); // Append the removed letter back to the letter container
+  }
+}
+
+// Attach an event listener to the Delete button
+deleteBtn.addEventListener('click', () => {
+  deleteLastPlacedLetter();
+});
+
+// Function to handle touch events for adding a letter to the boxes
+function handleTouchStart(event) {
+  const touchedLetter = event.target;
+  if (touchedLetter.classList.contains('letter')) {
+    touchedLetter.classList.add('dragging');
+    event.preventDefault(); // Prevent default touch events that interfere with drag and drop
+  }
+}
+
+function handleTouchMove(event) {
+  const touchedLetter = event.target;
+  if (touchedLetter.classList.contains('dragging')) {
+    // Some devices might require preventing default behavior for touchmove events
+    event.preventDefault();
+  }
+}
+
+function handleTouchEnd(event) {
+  const touchedLetter = event.target;
+  if (touchedLetter.classList.contains('dragging')) {
+    touchedLetter.classList.remove('dragging');
+
+    // Find the next available box to drop the letter into
+    let nextAvailableBox = null;
+    boxes.forEach(box => {
+      if (box.children.length === 0 && nextAvailableBox === null) {
+        nextAvailableBox = box;
+      }
+    });
+
+    if (nextAvailableBox !== null) {
+      nextAvailableBox.appendChild(touchedLetter);
+    }
+  }
+}
+
+// Attach touch event listeners to the letter containers
+letterContainer.addEventListener('touchstart', handleTouchStart);
+letterContainer.addEventListener('touchmove', handleTouchMove);
+letterContainer.addEventListener('touchend', handleTouchEnd);
