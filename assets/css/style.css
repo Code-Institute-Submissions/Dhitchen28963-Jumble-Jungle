@@ -1,0 +1,149 @@
+/* Background image for the main menu */
+.main-menu {
+  background-image: url('../images/jumble-jungle-main-menu.image.webp');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  }
+
+/* Basic styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the list */
+.nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the navigation icons */
+.nav-list li {
+  font-size: 70px;
+  cursor: pointer;
+  margin-right: 60px;
+}
+
+/* Styling for the overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  z-index: 9999;
+}
+
+/* Center the help section */
+.help-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff; /* White background for the help section */
+  padding: 20px;
+  text-align: center;
+  z-index: 10000;
+}
+
+/* Initially hide the help section */
+.overlay.active {
+  display: block;
+}
+
+/* Styles for the help image placed to the left */
+.left-image {
+  float: left; /* Image will float to the left of the text */
+  margin-right: 10px; /* Adjust as needed to provide space between image and text */
+}
+
+header {
+  background-image: url('../images/jumble-jungle-image.jpg');
+  background-position: cover;
+  height: auto;
+  width: 100%;
+  text-align: center;
+  padding: 100px 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+.box-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+}
+
+.box {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #000;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.letter-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.letter {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media (max-width: 739px) {
+  .box-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+  }
+  
+  .box {
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+/* To remove the border around the letters when they are placed into one of the eight boxes - this prevents overlapping */
+.letter {
+  width: 30px;
+  height: 30px;
+  margin: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Class to hide border */
+.letter.no-border {
+  border: none; /* Hide the border */
+}
+}
+
