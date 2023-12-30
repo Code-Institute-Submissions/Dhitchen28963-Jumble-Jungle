@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta tags for search engines -->  
+    <meta name="description" content="Word sramble game, Jumble Jungle, Online game">  
+    <meta name="keywords" content="Word game, Free online games, Game, Jumble Jungle ">
+
+    <!-- font awesome and google fonts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Jumble Jungle</title>
+</head>
+<body class="main-menu">
+  <header>
+    <h1>Jumble Jungle</h1>
+    <ul class="nav-list">
+      <li><a href="game.html" aria-label="Play Jumble Jungle"><i class="fas fa-play nav-icon" style="color: #f0ea42;" data-target="page1"></i></li></a>
+      <li><a href="leaderboard.html" aria-label="Go to the leaderboard"><i class="fas fa-trophy nav-icon" style="color: #f09f14;" data-target="page2"></i></li></a>
+      <li><i id="helpIcon" class="fas fa-question nav-icon" style="color: #18f727;" aria-label="Go to the help section to see how to play" data-target="page3"></i></li>
+    </ul>
+  </header>
+
+<!-- Help overlay screen -->
+<div id="helpOverlay" class="overlay">
+  <div id="helpSection" class="help-section">
+    <img src='assets/images/help-page-image.webp' alt="Help page image" class="left-image">
+    <h2>How to Play</h2>
+      <p>Welcome to Jumble Jungle, your aim is to create an 8-letter word using the provided scrambled letters. Here's how to play:</p>
+
+  <ol>
+    <li>You'll be presented with a set of scrambled letters. Rearrange these letters to form an 8-letter word.</li>
+    <li>Drag the letters into the boxes to form the word.</li>
+    <li>Once you believe you have formed the correct word, click the "Submit" button.</li>
+    <li>If the word is correct, you'll proceed to the next word. Otherwise, try again!</li>
+  </ol>
+
+<h2>Tips</h2>
+  <p>Here are some tips to help you:</p>
+    <ul>
+      <li>Take your time and try different combinations of letters.</li>
+      <li>Utilize the "Hint" button if you're stuck.</li>
+    </ul>
+
+<h2>Have Fun!</h2>
+  <p>Enjoy playing Jumble Jungle and have fun discovering words!</p>
+    <button id="closeButton">Close</button>
+  </div>
+</div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
