@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta tags for search engines -->  
+    <meta name="description" content="Word sramble game, Jumble Jungle, Online game">  
+    <meta name="keywords" content="Word game, Free online games, Game, Jumble Jungle ">
+
+    <!-- font awesome and google fonts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Jumble Jungle</title>
+</head>
+<body>
+  <header id="main-menu">
+    <h1><a href="index.html">Jumble Jungle</a></h1>
+    <nav>
+      <ul>
+        <li><a href="game.html" aria-label="Start a new game - this will start from the beginning">New Game</li></a>
+        <li><a href="leaderboard.html" aria-label="Go to the leaderboard"></li></a>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="box-container">
+    <!-- 8 boxes for letters -->
+    <div class="box" id="box1" droppable="true"></div>
+    <div class="box" id="box2" droppable="true"></div>
+    <div class="box" id="box3" droppable="true"></div>
+    <div class="box" id="box4" droppable="true"></div>
+    <div class="box" id="box5" droppable="true"></div>
+    <div class="box" id="box6" droppable="true"></div>
+    <div class="box" id="box7" droppable="true"></div>
+    <div class="box" id="box8" droppable="true"></div>
+  </div>
+
+  <div class="letter-container" id="letter-container"></div>
+
+  <button id="hint-btn">Hint</button>
+  <div id="hint-display"></div>
+
+  <button id="delete-btn">Delete</button>
+
+
+  <button id="submit-btn">Submit</button>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
