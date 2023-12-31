@@ -1,46 +1,38 @@
-.background-image {
-  background-image: url('../images/jumble-jungle-background.webp');
-  background-position: center;
-  height: auto;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  }
-
 /* Basic styling */
 body {
   margin: 0;
   padding: 0;
-  border: 10px solid green;
-  box-sizing: border-box;
   font-family: Arial, sans-serif;
+  border: 5px solid green;
+  box-sizing: border-box;
 }
 
-/* Styling for Main Menu icons which consist of Play, Leaderboard and Help */
-.fas {
-  font-size: 60px;
-}
-
-/* Margin to the first and last font awesome icons */
-.nav-list li:first-child i,
-.nav-list li:last-child i {
-  margin: 0 30px; /* Adjust the space around the icons */
-}
-
-/* Style the list */
-.nav-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Style the navigation icons */
-.nav-list li {
-  cursor: pointer;
-  margin-right: 0 50px;
-}
+  /* Styling for Main Menu icons which consist of Play, Leaderboard and Help */
+  .fas {
+    font-size: 60px;
+    }
+  
+    /* Margin to the first and last font awesome icons */
+  .nav-list li:first-child i,
+  .nav-list li:last-child i {
+    margin: 0 30px; /* Adjust the space around the icons */
+  }
+  
+  /* Style the list */
+  .nav-list {
+    list-style: none;
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 300px;
+  }
+  
+  /* Style the navigation icons */
+  .nav-list li {
+    cursor: pointer;
+    margin-right: 0 50px;
+  }
 
 /* Styling for the overlay */
 .overlay {
@@ -78,8 +70,6 @@ body {
 }
 
 header {
-  background-image: url('../images/jumble-jungle-image.jpg');
-  background-position: cover;
   height: auto;
   width: 100%;
   text-align: center;
@@ -125,7 +115,7 @@ h1 {
 }
 
 /* Media query: Foldable phones and smaller screen sizes - landcape and portrait */
-@media screen and (min-width: 240px) {
+@media screen and (min-width: 280px) and (max-width: 1280px)  {
   .left-image {
     max-width: 100%;
     height: 100px;
@@ -140,6 +130,14 @@ h1 {
   /* Reduce the text size inside #helpSection */
   #helpSection p {
     font-size: 12px;
+  }
+
+  #logo-background-image {
+    background-image: url('../images/jumble-jungle-main-menu-small-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
   }
 }
 
@@ -177,3 +175,13 @@ h1 {
 }
 }
 
+/* Media query: Foldable phones and smaller screen sizes - landcape and portrait */
+@media screen and (min-width: 1281px)  {
+#logo-background-image {
+  background-image: url('../images/jumble-jungle-main-menu-large-image.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+}
