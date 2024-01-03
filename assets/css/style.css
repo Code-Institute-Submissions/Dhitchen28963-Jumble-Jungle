@@ -7,6 +7,14 @@ body {
   box-sizing: border-box;
 }
 
+#logo-background-image {
+  background-image: url('../images/jumble-jungle-background-image-large.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  width: 100%;
+}
+
   /* Styling for Main Menu icons which consist of Play, Leaderboard and Help */
   .fas {
     font-size: 60px;
@@ -131,14 +139,6 @@ h1 {
   #helpSection p {
     font-size: 12px;
   }
-
-  #logo-background-image {
-    background-image: url('../images/jumble-jungle-main-menu-small-image.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-  }
 }
 
 /* Media query: Foldable phones and smaller screen sizes - landcape and portrait */
@@ -172,16 +172,5 @@ h1 {
 /* Class to hide border */
 .letter.no-border {
   border: none; /* Hide the border */
-}
-}
-
-/* Media query: Foldable phones and smaller screen sizes - landcape and portrait */
-@media screen and (min-width: 1281px)  {
-#logo-background-image {
-  background-image: url('../images/jumble-jungle-main-menu-large-image.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
 }
 }
