@@ -3,6 +3,7 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  height: 100vh;
 }
 
 #logo-background-image {
@@ -24,11 +25,11 @@ body, html {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 75%);
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid red; /* Red border around all 3 icons */
+  border: 2px solid red;
 }
 
 /* Additional styling for individual icon divs */
@@ -122,13 +123,13 @@ body, html {
 }
 
 /* Background image positioning for phones in landscape mode */
-@media screen and (min-height: 280px) and (max-height: 430px) and (orientation: landscape) {
+@media screen and (min-height: 240px) and (max-height: 1090px) and (orientation: landscape) {
   #logo-background-image {
     background-image: url('../images/jumble-jungle-background-image-large.webp');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top 50px;
-    height: auto;
+    background-position-y: 35%;
+    height: 100vh;
     width: 100%;
   }
 }
