@@ -227,3 +227,5 @@ function handleTouchEnd(event) {
 letterContainer.addEventListener('touchstart', handleTouchStart);
 letterContainer.addEventListener('touchmove', handleTouchMove);
 letterContainer.addEventListener('touchend', handleTouchEnd);
+
+ 
