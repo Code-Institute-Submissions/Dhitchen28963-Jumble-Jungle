@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <title>Jumble Jungle</title>
 </head>
-<body>
+<body id="game-area">
   <header id="main-menu">
     <h1><a href="index.html">Jumble Jungle</a></h1>
     <nav>
@@ -26,7 +26,7 @@
       </ul>
     </nav>
   </header>
-
+  
   <div class="box-container">
     <!-- 8 boxes for letters -->
     <div class="box" id="box1" droppable="true"></div>
@@ -42,7 +42,6 @@
   <div class="letter-container" id="letter-container"></div>
 
   <div id="game-buttons">
-  <button id="reveal-btn">Reveal Letter</button>
   <button id="hint-btn">Hint</button>
   <div id="hint-display"></div>
   <button id="delete-btn">Delete</button>

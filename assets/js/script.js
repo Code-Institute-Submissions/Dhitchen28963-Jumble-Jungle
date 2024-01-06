@@ -47,6 +47,7 @@ let words = [
   { word: 'MONOPOLY', scrambled: 'LMOOYNOP', hint: 'This word signifies exclusive control or possession of something.'},
   // Add further words here //
 ];
+
 let currentWordIndex = 0; // Keep track of the current word index
 let currentWord = words[currentWordIndex]; // Initialize with the first word
 
@@ -57,13 +58,16 @@ const hintDisplay = document.getElementById('hint-display');
 function displayHint() {
   if (currentWordIndex < words.length) {
     hintDisplay.textContent = words[currentWordIndex].hint;
-  } else {
-    hintDisplay.textContent = 'No more hints available.';
   }
 }
 
 hintBtn.addEventListener('click', () => {
-  displayHint();
+  if (hintDisplay.textContent !== '') {
+    // Hide the hint message if it's already displayed
+    hintDisplay.textContent = '';
+  } else {
+    displayHint(); // Display the hint if it's not displayed
+  }
 });
 
 const letterContainer = document.getElementById('letter-container');
