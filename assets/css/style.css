@@ -88,20 +88,34 @@ body, html {
   height: 100px;
 }
 
+/* Main menu section for the header section of the game & leaderboard pages */
+#main-menu h1 {
+  text-align: center;
+}
+
+#main-menu nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
 .box-container {
   display: flex;
-  justify-content: space-around;
-  margin-top: 5px;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .box {
-  width: 80px;
-  height: 80px;
+  width: 30px;
+  height: 30px;
   border: 1px solid #000;
-  margin: 10px;
+  margin: 1px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 #box1,
@@ -112,8 +126,8 @@ body, html {
 #box6,
 #box7,
 #box8 {
-  background-image: url('../images/box-container-image.webp');
-
+  position: relative;
+  background-image: url('../images/box-container-small-image.webp');
 }
 
 .letter-container {
@@ -124,14 +138,28 @@ body, html {
 }
 
 .letter {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   border: 1px solid #000;
+  background-color: rgb(221, 197, 159);
+  font-weight: bolder;
   margin: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+#game-buttons {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+}
+
+#game-buttons button {
+  margin: 0 5px;
+  margin-top: 10px;
 }
 
 /* Background image positioning for phones in landscape mode */
@@ -146,21 +174,35 @@ body, html {
   }
 }
 
-/* Media query: Foldable phones and smaller screen sizes - landcape and portrait */
-@media screen and (max-width: 739px) {
+/* Media query for spacing between boxes within box-container */
+@media screen and (min-width: 280px) and (max-width: 500px) {
+  #box1,
+  #box2,
+  #box3,
+  #box4,
+  #box5,
+  #box6,
+  #box7,
+  #box8 {
+    position: relative;
+    background-image: url('../images/box-container-small-image.webp');
+  }
+
   .box-container {
     display: flex;
-    justify-content: space-around;
-    margin-top: 5px;
+    justify-content: center;
+    margin-top: 40px;
   }
   
   .box {
     width: 30px;
     height: 30px;
-    margin: 2px;
+    margin: 1px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 1;
   }
 
 /* To remove the border around the letters when they are placed into one of the eight boxes - this prevents overlapping */
@@ -172,6 +214,108 @@ body, html {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+/* Class to hide border */
+.letter.no-border {
+  border: none; /* Hide the border */
+}
+}
+
+/* Media query: Foldable phones and smaller screen sizes - landcape and portrait */
+@media screen and (min-width: 500px) and (max-width: 650px) {
+  #box1,
+  #box2,
+  #box3,
+  #box4,
+  #box5,
+  #box6,
+  #box7,
+  #box8 {
+    position: relative;
+    background-image: url('../images/box-container-medium-image.webp');
+  }
+
+  .box-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  
+  .box {
+    width: 50px;
+    height: 50px;
+    margin: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+/* To remove the border around the letters when they are placed into one of the eight boxes - this prevents overlapping */
+.letter {
+  width: 35px;
+  height: 35px;
+  margin: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+/* Class to hide border */
+.letter.no-border {
+  border: none; /* Hide the border */
+}
+}
+
+/* Media query: Foldable phones and smaller screen sizes - landcape and portrait */
+@media screen and (min-width: 650px) {
+  #box1,
+  #box2,
+  #box3,
+  #box4,
+  #box5,
+  #box6,
+  #box7,
+  #box8 {
+    position: relative;
+    background-image: url('../images/box-container-image.webp');
+  }
+
+  .box-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  
+  .box {
+    width: 75px;
+    height: 75px;
+    margin: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+/* To remove the border around the letters when they are placed into one of the eight boxes - this prevents overlapping */
+.letter {
+  width: 45px;
+  height: 45px;
+  margin: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
 }
 
 /* Class to hide border */
