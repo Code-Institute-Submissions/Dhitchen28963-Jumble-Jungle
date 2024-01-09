@@ -97,9 +97,18 @@ body, html {
   height: auto;
 }
 
+#helpCloseButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
 /* Styling for game.html page */
 #game-area {
-  background-image: url('../images/game-area-image.webp');
+  background-image: url('../images/game-background.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 body {
@@ -251,6 +260,9 @@ body {
 /* Styling for leaderboard page */
 #leaderboard-background {
   background-image: url('../images/leaderboard-background-image.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 #leaderboard-menu {
