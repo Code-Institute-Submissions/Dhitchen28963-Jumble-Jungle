@@ -5,13 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const helpOverlay = document.getElementById('helpOverlay');
         if (helpOverlay) {
           helpOverlay.classList.toggle('active');
-        } else {
-          console.error('helpOverlay is null');
         }
       });
-    } else {
-      console.error('helpIcon is null');
-    }
+    }  
   
     // For closing the help overlay
     const helpCloseButton = document.getElementById('helpCloseButton');
@@ -20,23 +16,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const helpOverlay = document.getElementById('helpOverlay');
             if (helpOverlay) {
                 helpOverlay.classList.remove('active');
-            } else {
-                console.error('helpOverlay is null');
             }
         });
-    } else {
-        console.error('helpCloseButton is null');
     }
-  
-  // Navigation menu clickable images //
-  document.querySelectorAll('.nav-icon').forEach(function(icon) {
-    icon.addEventListener('click', function() {
-      const targetPage = this.getAttribute('data-target');
-      // Perform actions based on the clicked icon or page target
-      // For example: show/hide content, load a new section, etc.
-      console.log('Clicked icon with target:', targetPage);
-    });
-  });
   });
   
   // Selection of words for the game //
@@ -175,8 +157,6 @@ document.addEventListener('DOMContentLoaded', function() {
         modalCloseButton.addEventListener('click', function() {
           modal.style.display = 'none';
         });
-      } else {
-        console.error('modalCloseButton is null');
       }
     }
 
@@ -187,10 +167,6 @@ function handleGameCompletion() {
   if (playerName) {
     // Redirect to the leaderboard page with the player's name as a query parameter
     window.location.href = `leaderboard.html?name=${encodeURIComponent(playerName)}`;
-  } else {
-    // If the player didn't enter a name, you can handle this scenario accordingly
-    console.log('No name entered');
-    // Optionally, you can redirect them back to the main page or handle this case differently
   }
 }
 

@@ -19,10 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const playerNameCell = newRow.insertCell(0);
         playerNameCell.textContent = playerName;
       }
-    } else {
-      console.error('Leaderboard table or playerName not found.');
     }
   }
+
 
   // Call the updateLeaderboard function to update the leaderboard with the player's name
   updateLeaderboard();
