@@ -1,25 +1,26 @@
 document.addEventListener('DOMContentLoaded', function() {
     const helpIcon = document.getElementById('helpIcon');
-    if (helpIcon) {
-      helpIcon.addEventListener('click', function() {
-        const helpOverlay = document.getElementById('helpOverlay');
-        if (helpOverlay) {
-          helpOverlay.classList.toggle('active');
-        }
-      });
-    }  
-  
-    // For closing the help overlay
+    const helpOverlay = document.getElementById('helpOverlay');
     const helpCloseButton = document.getElementById('helpCloseButton');
-    if (helpCloseButton) {
-        helpCloseButton.addEventListener('click', function() {
-            const helpOverlay = document.getElementById('helpOverlay');
-            if (helpOverlay) {
-                helpOverlay.classList.remove('active');
-            }
-        });
+
+    function toggleHelpOverlay() {
+      if (helpOverlay) {
+        helpOverlay.classList.toggle('active');
+      }
     }
-  });
+  
+    if (helpIcon) {
+      helpIcon.addEventListener('click', toggleHelpOverlay);
+    }
+  
+    if (helpCloseButton) {
+      helpCloseButton.addEventListener('click', () => {
+        if (helpOverlay) {
+          helpOverlay.classList.remove('active');
+        }
+    });
+    }
+});
   
   // Selection of words for the game //
   let words = [
@@ -102,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
     currentWord = words[currentWordIndex]; // Set the current word to the next word
     createLetterContainers(); // Load letters for the next word
-    attachDragAndDropListeners(); // Attach drag-and-drop listeners to the new set of letters
+    attachDragAndDropListeners(); // Drag-and-drop listeners to the new set of letters
   }
   
   // Function to handle drag-and-drop listeners for the letters
@@ -129,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   createLetterContainers();
-  attachDragAndDropListeners(); // Attach drag-and-drop listeners to the initial set of letters
+  attachDragAndDropListeners(); // Drag-and-drop listeners to the initial set of letters
   
   boxes.forEach(box => {
     box.addEventListener('dragover', e => {
@@ -144,25 +145,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-    // Function to display modal messages
-    function displayModalMessage(message) {
-      const modal = document.getElementById('modal');
-      const modalMessage = document.getElementById('modalMessage');
-      modalMessage.textContent = message;
-      modal.style.display = 'block';
-  
-      // Close modal when the close button is clicked
-      const modalCloseButton = document.querySelector('.modalCloseButton');
-      if (modalCloseButton) {
-        modalCloseButton.addEventListener('click', function() {
-          modal.style.display = 'none';
-        });
-      }
-    }
+// Function to display modal messages including completion message
+function displayModalMessage(message) {
+  const modal = document.getElementById('modal');
+  const modalMessage = document.getElementById('modalMessage');
+  modalMessage.textContent = message;
+  modal.style.display = 'block';
+
+  // Close modal when the close button is clicked
+  const modalCloseButton = document.querySelector('.modalCloseButton');
+  if (modalCloseButton) {
+    modalCloseButton.addEventListener('click', function() {
+      modal.style.display = 'none';
+    });
+  }
+}
 
 // Function to handle game completion
 function handleGameCompletion() {
-  let playerName = prompt('Congratulations! You completed the game. Please enter your name:');
+  let playerName = prompt('Congratulations! You completed Jumble Jungle. Please enter your name:');
 
   if (playerName) {
     // Redirect to the leaderboard page with the player's name as a query parameter
@@ -170,8 +171,8 @@ function handleGameCompletion() {
   }
 }
 
-// Submit button event listener
-submitBtn.addEventListener('click', () => {
+// Function to check the submitted word and handle accordingly
+function checkSubmittedWord() {
   let formedWord = '';
   boxes.forEach((box) => {
     if (box.children.length > 0) {
@@ -182,17 +183,20 @@ submitBtn.addEventListener('click', () => {
   if (formedWord === currentWord.word) {
     if (currentWordIndex === words.length - 1) {
       handleGameCompletion();
-      displayCompletedGameMessage('Congratulations! You have completed Jumble Jungle.');
+      displayModalMessage('Congratulations! You have completed Jumble Jungle.');
     } else {
-      currentWordIndex++; // Move to the next word index
-      currentWord = words[currentWordIndex]; // Update the current word
+      currentWordIndex++;
+      currentWord = words[currentWordIndex];
       displayModalMessage('Correct! Move on to the next word.');
       setupGameForNextWord();
     }
   } else {
     displayModalMessage('Incorrect! Try again.');
   }
-});
+}
+
+// Submit button event listener
+submitBtn.addEventListener('click', checkSubmittedWord);
   
   // Function to handle deleting the last letter from the boxes
   function deleteLastPlacedLetter() {
