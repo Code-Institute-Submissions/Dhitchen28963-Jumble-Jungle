@@ -10,6 +10,7 @@ body, html {
   position: relative;
 }
 
+/* Style for the background image of the index.html page */
 #logo-background-image {
   background-image: url('../images/jumble-jungle-background-image-large.webp');
   background-repeat: no-repeat;
@@ -61,11 +62,11 @@ body, html {
   z-index: 10000;
 }
 
-/* Set a specific height to trigger the scrollbar */
+/* Sets a specific height to trigger the scrollbar */
 #helpSection {
   height: 80vh;
   width: 80%;
-  overflow-y: auto; /* Add vertical scrollbar when content exceeds the height */
+  overflow-y: auto; /* Adds vertical scrollbar when content exceeds the height */
 }
 
 /* Styling for the help section */
@@ -73,15 +74,15 @@ body, html {
   font-family: 'Bungee Spice', sans-serif;
 }
   
-#helpSection p {
+.help-text-content p {
   font-size: 16px;
+  font-weight: bold;
 }
 
 #helpSection ol,
 #helpSection ul {
   text-align: left;
   margin-right: 20px;
-
 }
 
 /* Initially hide the help section */
@@ -92,8 +93,8 @@ body, html {
 /* Styles for the help image in the help section */
 .help-image {
   float: left; /* Image will float to the left of the text */
-  max-width: 100%;
-  height: 100px;
+  max-width: 100px;
+  height: auto;
 }
 
 /* Styling for game.html page */
@@ -107,7 +108,7 @@ body {
   position: relative; /* Create a positioning context for absolute positioning */
 }
 
-/* CSS for modal messages */
+/* Styling for modal/customer notification messages when a user makes an incorrect/correct input or completes game */
 .modal {
   display: none;
   position: fixed;
@@ -145,29 +146,34 @@ body {
   cursor: pointer;
 }
 
+/* Styling for the 3 clickable images in the game.index */
 .hompage-button,
 .restart-button,
 .help-button {
   position: absolute;
 }
 
+/* Style for the home-page button position so it remains on the top left of the game.html */
 .homepage-button {
   left: 10px; /* Adjust left margin for positioning */
   top: 0px;
 }
 
+/* Style for the help button position so its centered in the game.index */
 .help-button {
   top: 0px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1000; /* Set z-index to ensure it's above other content */
+  z-index: 1000;
 }
 
+/* Style for the restart button position so it remains on the top right of the game.index */
 .restart-button {
-  right: 0px; /* Adjust right margin for positioning */
+  right: 0px;
   top: 0px;
 }
 
+/* Styles for the 8 boxes and the box-container within the game.html */
 .box-container {
   display: flex;
   justify-content: center;
@@ -195,9 +201,12 @@ body {
 #box7,
 #box8 {
   position: relative;
-  background-image: url('../images/box-small-image.webp');
+  background-image: url('../images/box-image.webp');
+  background-size: contain;
+  background-position: center;
 }
 
+/* Styling for the 8 letters in the letter container */
 .letter-container {
   display: flex;
   justify-content: center;
@@ -220,14 +229,23 @@ body {
   z-index: 2;
 }
 
+/* Styling for the hint, delete and submit buttons in the game.html */
 #game-buttons {
   display: flex;
-  justify-content: center; /* Center items horizontally */
+  justify-content: center;
 }
 
 #game-buttons button {
   margin: 0 5px;
   margin-top: 10px;
+}
+
+/* Style for the hint display */
+#hint-display {
+  text-align: center;
+  background-color: #f0f0f0;
+  vertical-align: middle;
+  margin-top: 13px;
 }
 
 /* Styling for leaderboard page */
@@ -257,7 +275,6 @@ body {
   color: #333; /* Dark text color */
 }
 
-/* Styling for table headers (optional) */
 #leaderboard-table th {
   background-color: #ddd; /* Light gray background for table headers */
   color: #333; /* Dark text color */
@@ -280,6 +297,7 @@ th {
 
 /* Background image positioning for phones in landscape mode */
 @media screen and (min-height: 240px) and (max-height: 1090px) and (orientation: landscape) {
+  /* Background image for larger screen sizes for the index.html page */
   #logo-background-image {
     background-image: url('../images/jumble-jungle-background-image-large.webp');
     background-repeat: no-repeat;
@@ -290,29 +308,34 @@ th {
   }
 }
 
+/* Styling for the container with the clickable images in the leaderboard.html page */
 #leaderboard-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px; /* Add padding for spacing */
+  padding: 10px;
 }
 
+/* Styling for the clickable image on the leaderboard.html */
 .homepage {
-  text-align: center; /* Center the h1 element */
-  flex-grow: 1; /* Allow the h1 element to take available space */
+  text-align: center;
+  flex-grow: 1; /* Allows the h1 element to take available space */
 }
 
+/* Styling for the clickable image on the game.html page */
 .homepage-button {
   order: -1; /* Sets the image to appear on the top left of the screen */
 }
 
-/* Media query for spacing between boxes within box-container */
+/* Media query: Foldable phones and smaller screen sizes */
 @media screen and (min-width: 280px) and (max-width: 500px) {
+  /* Styling for the clickable images in the index.html */
   #main-menu-container img {
     width: 80px;
     height: 80px;
   }
 
+  /* Styling for the clickable images in the leaderboard and game page */
   .homepage-button img,
   .home-button img,
   .help-button,
@@ -321,6 +344,7 @@ th {
     height: 50px;
   }
 
+  /* Styles for the 8 boxes and the box-container within the game.html */
   #box1,
   #box2,
   #box3,
@@ -330,7 +354,9 @@ th {
   #box7,
   #box8 {
     position: relative;
-    background-image: url('../images/box-small-image.webp');
+    background-image: url('../images/box-image.webp');
+    background-size: contain;
+    background-position: center;
   }
 
   .box-container {
@@ -350,32 +376,40 @@ th {
     z-index: 1;
   }
 
-/* To remove the border around the letters when they are placed into one of the eight boxes - this prevents overlapping */
-.letter {
-  width: 30px;
-  height: 30px;
-  margin: 1px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  position: relative;
-  z-index: 2;
-}
+  /* To remove the border around the letters when they are placed into one of the eight boxes - this prevents overlapping */
+  .letter {
+    width: 30px;
+    height: 30px;
+    margin: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+  }
 
-/* Class to hide border */
-.letter.no-border {
-  border: none; /* Hide the border */
-}
+  /* Class to hide border */
+  .letter.no-border {
+    border: none; /* Hide the border */
+  }
+
+  /* Style for the first h2 element in the help section */
+  .help-header {
+    margin-top: 40px;
+    text-align: center;
+  }
 }
 
 /* Media query: Foldable phones and smaller screen sizes - landcape and portrait */
 @media screen and (min-width: 500px) and (max-width: 650px) {
+  /* Styling for the clickable images in the index.html */
   #main-menu-container img {
     width: 85px;
     height: 85px;
   }
 
+  /* Styling for the clickable images in the leaderboard and game page */
   .homepage-button img,
   .home-button img,
   .help-button,
@@ -384,6 +418,7 @@ th {
     height: 55px;
   }
 
+  /* Styles for the 8 boxes and the box-container within the game.html */
   #box1,
   #box2,
   #box3,
@@ -393,7 +428,9 @@ th {
   #box7,
   #box8 {
     position: relative;
-    background-image: url('../images/box-medium-image.webp');
+    background-image: url('../images/box-image.webp');
+    background-size: contain;
+    background-position: center;
   }
 
   .box-container {
@@ -413,32 +450,40 @@ th {
     z-index: 1;
   }
 
-/* To remove the border around the letters when they are placed into one of the eight boxes - this prevents overlapping */
-.letter {
-  width: 35px;
-  height: 35px;
-  margin: 1px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  position: relative;
-  z-index: 2;
+  /* Syling for the letter container */
+  .letter {
+    width: 35px;
+    height: 35px;
+    margin: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Class to hide border */
+  .letter.no-border {
+    border: none; /* Hide the border */
+  }
+
+  /* Style for the first h2 element in the help section */
+  .help-header {
+    margin-top: 50px;
+    text-align: center;
+  }
 }
 
-/* Class to hide border */
-.letter.no-border {
-  border: none; /* Hide the border */
-}
-}
-
-/* Media query: Foldable phones and smaller screen sizes - landcape and portrait */
+/* Media query: Larger screens and small tablets - landcape and portrait */
 @media screen and (min-width: 650px) {
+  /* styles for index.html page */
   #main-menu-container img {
     width: 90px;
     height: 90px;
   }
 
+  /* Styles for all clickable image buttons for the leaderboard and game pages */
   .homepage-button img,
   .home-button img,
   .help-button,
@@ -447,6 +492,17 @@ th {
     height: 60px;
   }
 
+  /* Styles for the help image in the help section */ 
+  #helpSection .help-image {
+    width: 140px;
+    height: auto;
+  }
+
+  #helpSection p { 
+    font-size: 20px; 
+  } 
+
+  /* Styles for the 8 boxes and the box-container within the game.html */
   #box1,
   #box2,
   #box3,
@@ -456,7 +512,9 @@ th {
   #box7,
   #box8 {
     position: relative;
-    background-image: url('../images/box-large-image.webp');
+    background-image: url('../images/box-image.webp');
+    background-size: contain;
+    background-position: center;
   }
 
   .box-container {
@@ -476,57 +534,111 @@ th {
     z-index: 1;
   }
 
-/* To remove the border around the letters when they are placed into one of the eight boxes - this prevents overlapping */
-.letter {
-  width: 45px;
-  height: 45px;
-  margin: 1px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  position: relative;
-  z-index: 2;
+  /* To remove the border around the letters when they are placed into one of the eight boxes - this prevents overlapping */
+  .letter {
+    width: 45px;
+    height: 45px;
+    margin: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Class to hide border */
+  .letter.no-border {
+    border: none; /* Hide the border */
+  }
+
+  /* Style for the first h2 element in the help section */
+  .help-header {
+    margin-top: 80px;
+    text-align: center;
+  }
 }
 
-/* Class to hide border */
-.letter.no-border {
-  border: none; /* Hide the border */
-}
+/* Media query: Specifically for the help section overlay */
+@media screen and (min-width: 1000px) {
+   /* Style for the help section */ 
+   #helpSection { 
+    height: 65vh;
+    width: 80%;
+  }
 }
 
-/* Media query: Foldable phones and smaller screen sizes - landcape and portrait */
+/* Media query: Tablets and larger screen sizes - landcape and portrait */
 @media screen and (min-width: 1447px) {
-#logo-background-image {
-  background-image: url('../images/jumble-jungle-background-image-larger.webp');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
-}
+  /* Background image which also contains the responsive game title */
+  #logo-background-image {
+    background-image: url('../images/jumble-jungle-background-image-larger.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+  }
 
-#main-menu-container img {
-  width: 140px;
-  height: 140px;
-}
+  /* Clickable image buttons for the index.html */
+  #main-menu-container img {
+    width: 140px;
+    height: 140px;
+  }
 
-/* Center the icon container */
-.main-menu-options {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  /* Center the icon container */
+  .main-menu-options {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
+  /* Styles for all clickable image buttons for the leaderboard and game pages */
   .homepage-button img,
   .home-button img,
   .help-button,
   .restart-button img {
     width: 160px;
     height: 160px;
+  }
+
+  /* Style for the help section */ 
+  #helpSection { 
+    height: 50vh;
+    width: 80%;
+  }
+
+  #helpSection .help-image {
+    width: 170px;
+    height: auto;
+  }
+
+  .help-text-content {
+    padding-top: 5px;
+  }
+
+  .help-text-content ol,
+  .help-text-content ul {
+    text-align: left;
+    margin-left: 60px;
+  }
+
+  /* Styles for the 8 boxes and the box-container within the game.html */
+  #box1,
+  #box2,
+  #box3,
+  #box4,
+  #box5,
+  #box6,
+  #box7,
+  #box8 {
+    position: relative;
+    background-image: url('../images/box-image.webp');
+    background-size: contain;
+    background-position: center;
   }
 
   .box-container {
@@ -546,59 +658,61 @@ th {
     z-index: 1;
   }
 
-/* To remove the border around the letters when they are placed into one of the eight boxes - this prevents overlapping */
-.letter {
-  width: 80px;
-  height: 80px;
-  margin: 2px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  position: relative;
-  z-index: 2;
-}
+  /* To remove the border around the letters when they are placed into one of the eight boxes - this prevents overlapping */
+  .letter {
+    width: 80px;
+    height: 80px;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+  }
 }
 
-/* Media query: Foldable phones and smaller screen sizes - landcape and portrait */
+/* Media query: Laptops and monitors */
 @media screen and (min-width: 1972px) {
-.main-menu-options {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 70%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  /* Style for the 2 clickable images on the index.html */
+  .main-menu-options {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.box-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 150px;
-}
+  /* Styles for the 8 boxes and the box-container within the game.html */
+  .box-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+  }
 
-.box {
-  width: 150px;
-  height: 150px;
-  margin: 3px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-}
+  .box {
+    width: 150px;
+    height: 150px;
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
 
-/* To remove the border around the letters when they are placed into one of the eight boxes - this prevents overlapping */
-.letter {
-width: 110px;
-height: 110px;
-margin: 2px;
-display: flex;
-justify-content: center;
-align-items: center;
-cursor: pointer;
-position: relative;
-z-index: 2;
-}
+  /* Styling for the letter containers */
+  .letter {
+    width: 110px;
+    height: 110px;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+  }
 }
