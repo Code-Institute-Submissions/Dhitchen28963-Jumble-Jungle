@@ -1,3 +1,4 @@
+/* eslint-env es6 */
 document.addEventListener('DOMContentLoaded', function() {
   // Function to get the query parameter value by name
   function getQueryParam(name) {

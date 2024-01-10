@@ -1,3 +1,4 @@
+/* eslint-env es6 */
 document.addEventListener('DOMContentLoaded', function() {
     const helpIcon = document.getElementById('helpIcon');
     const helpOverlay = document.getElementById('helpOverlay');
@@ -223,7 +224,7 @@ submitBtn.addEventListener('click', checkSubmittedWord);
   deleteBtn.addEventListener('click', () => {
     deleteLastPlacedLetter();
   });
-  
+
   // Function to handle touch events for adding a letter to the boxes
   function handleTouchStart(event) {
     const touchedLetter = event.target;
@@ -259,3 +260,8 @@ submitBtn.addEventListener('click', checkSubmittedWord);
       }
     }
   }
+
+// Attach touch event listeners for touch-based dragging
+letterContainer.addEventListener('touchstart', handleTouchStart);
+letterContainer.addEventListener('touchmove', handleTouchMove);
+letterContainer.addEventListener('touchend', handleTouchEnd);
