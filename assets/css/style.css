@@ -155,25 +155,6 @@ body {
   cursor: pointer;
 }
 
-/* Styling for the timer in the game.html */
-#timer-container {
-  text-align: center;
-  margin-top: 15px; /* Adjust the margin as needed */
-}
-
-#timer {
-  border: 2px solid #333;
-  padding: 10px;
-  display: inline-block;
-  font-size: 24px;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  margin: 10px;
-  background-color: #fff;
-  padding: 5px;
-}
-
 /* Styling for the 3 clickable images in the game.index */
 .hompage-button,
 .restart-button,
@@ -293,7 +274,7 @@ body {
 
 #leaderboard-menu h1 {
   font-family: 'Bungee Spice', sans-serif;
-  font-size: 26px;
+  font-size: 30px;
 }
 
 #leaderboard-menu a {
@@ -588,6 +569,13 @@ th {
     margin-top: 80px;
     text-align: center;
   }
+
+  /* Leaderboard styles */
+  #leaderboard-menu h1 {
+    font-family: 'Bungee Spice', sans-serif;
+    font-size: 40px;
+    text-align: center;
+  }
 }
 
 /* Media query: Specifically for the help section overlay */
@@ -700,6 +688,13 @@ th {
     cursor: pointer;
     position: relative;
     z-index: 2;
+  }
+
+   /* Leaderboard styles */
+  #leaderboard-menu h1 {
+    font-family: 'Bungee Spice', sans-serif;
+    font-size: 60px;
+    margin-right: 60px;
   }
 }
 
