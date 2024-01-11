@@ -73,7 +73,7 @@ body, html {
 #helpSection h2 {
   font-family: 'Bungee Spice', sans-serif;
 }
-  
+
 .help-text-content p {
   font-size: 16px;
   font-weight: bold;
@@ -114,7 +114,7 @@ body, html {
 body {
   margin: 0;
   padding: 0;
-  position: relative; /* Create a positioning context for absolute positioning */
+  position: relative;
 }
 
 /* Styling for modal/customer notification messages when a user makes an incorrect/correct input or completes game */
@@ -155,6 +155,25 @@ body {
   cursor: pointer;
 }
 
+/* Styling for the timer in the game.html */
+#timer-container {
+  text-align: center;
+  margin-top: 15px; /* Adjust the margin as needed */
+}
+
+#timer {
+  border: 2px solid #333;
+  padding: 10px;
+  display: inline-block;
+  font-size: 24px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+  background-color: #fff;
+  padding: 5px;
+}
+
 /* Styling for the 3 clickable images in the game.index */
 .hompage-button,
 .restart-button,
@@ -164,7 +183,7 @@ body {
 
 /* Style for the home-page button position so it remains on the top left of the game.html */
 .homepage-button {
-  left: 10px; /* Adjust left margin for positioning */
+  left: 10px; 
   top: 0px;
 }
 
@@ -283,13 +302,13 @@ body {
 
 /* Leaderboard table styling */
 #leaderboard-table {
-  background-color: #f2f2f2; /* Light background color */
-  color: #333; /* Dark text color */
+  background-color: #f2f2f2;
+  color: #333;
 }
 
 #leaderboard-table th {
-  background-color: #ddd; /* Light gray background for table headers */
-  color: #333; /* Dark text color */
+  background-color: #ddd;
+  color: #333;
 }
 
 table {
@@ -413,7 +432,7 @@ th {
   }
 }
 
-/* Media query: Foldable phones and smaller screen sizes - landcape and portrait */
+/* Media query: Foldable phones and smaller screen sizes - landscape and portrait */
 @media screen and (min-width: 500px) and (max-width: 650px) {
   /* Styling for the clickable images in the index.html */
   #main-menu-container img {

@@ -1,152 +1,172 @@
 /* eslint-env es6 */
 document.addEventListener('DOMContentLoaded', function() {
-    const helpIcon = document.getElementById('helpIcon');
-    const helpOverlay = document.getElementById('helpOverlay');
-    const helpCloseButton = document.getElementById('helpCloseButton');
+  // DOM elements
+  const helpIcon = document.getElementById('helpIcon');
+  const helpOverlay = document.getElementById('helpOverlay');
+  const helpCloseButton = document.getElementById('helpCloseButton');
 
-    function toggleHelpOverlay() {
+  // Function to toggle the help overlay
+  function toggleHelpOverlay() {
       if (helpOverlay) {
-        helpOverlay.classList.toggle('active');
+          helpOverlay.classList.toggle('active');
       }
-    }
-  
-    if (helpIcon) {
-      helpIcon.addEventListener('click', toggleHelpOverlay);
-    }
-  
-    if (helpCloseButton) {
-      helpCloseButton.addEventListener('click', () => {
-        if (helpOverlay) {
-          helpOverlay.classList.remove('active');
-        }
-    });
-    }
-});
-  
-  // Selection of words for the game //
-  let words = [
-    { word: 'RHETORIC', scrambled: 'TRHCOREI', hint: 'This word refers to the art of persuasive speaking or writing.'},
-    { word: 'INNOCENT', scrambled: 'NINOTCEN', hint: 'This word describes someone who is not guilty.'},
-    { word: 'ACTIVATE', scrambled: 'TIVCAATE', hint: 'This word means to make something active or operative.'},
-    { word: 'FAMILIAR', scrambled: 'AMILAFRI', hint: 'This word signifies something well-known or easily recognized.'},
-    { word: 'SURROUND', scrambled: 'USURDRON', hint: 'This word means to encircle or envelop completely.'},
-    { word: 'MARRIAGE', scrambled: 'MAGERRAI', hint: 'This word refers to the union of two individuals in matrimony.'},
-    { word: 'CHAMPION', scrambled: 'MOPHICAN', hint: 'This word denotes a person who excels in a competition.'},
-    { word: 'STUBBORN', scrambled: 'BRNTUOBS', hint: 'This word refers to a person who is determined and unyielding.'},
-    { word: 'ATTITUDE', scrambled: 'DTTATIEU', hint: 'This word describes a settled way of thinking or feeling about something'},
-    { word: 'MEDICINE', scrambled: 'MDIENICE', hint: 'This word pertains to substances used for treating diseases.'},
-    { word: 'PROFOUND', scrambled: 'PFRDUNOO', hint: 'This word signifies something deep or intense.'},
-    { word: 'CONVINCE', scrambled: 'CNVNCOIE', hint: 'This word means to persuade or win over by argument.'},
-    { word: 'DEDICATE', scrambled: 'DEIDCTAE', hint: 'This word refers to commit oneself to a particular undertaking.'},
-    { word: 'ROMANTIC', scrambled: 'IMONRACT', hint: 'This word pertains to sentiments or actions associated with love.'},
-    { word: 'DISTANCE', scrambled: 'SITDNECA', hint: 'This word represents the extent or amount of space between two things.'},
-    { word: 'FLOURISH', scrambled: 'LFOSIUHR', hint: 'This word means to grow or develop in a healthy or vigorous way.'},
-    { word: 'UNLAWFUL', scrambled: 'NLUUFALW', hint: 'This word denotes something illegal or prohibited by law.'},
-    { word: 'APPROACH', scrambled: 'AORCPPAH', hint: 'This word signifies an initial approach or means of dealing with something.'},
-    { word: 'COLLAPSE', scrambled: 'LALEPSCO', hint: 'This word represents the sudden fall or breakdown of something.'},
-    { word: 'PARTICLE', scrambled: 'TPCLRIEA', hint: 'This word refers to a tiny or minute piece of matter.'},
-    { word: 'MOURNING', scrambled: 'NIMOURNG', hint: 'This word pertains to the expression of grief or sorrow.'},
-    { word: 'PORTRAIT', scrambled: 'RROAPTIT', hint: 'This word refers to a painting, drawing, or photograph of a person.'},
-    { word: 'MONOPOLY', scrambled: 'LMOOYNOP', hint: 'This word signifies exclusive control or possession of something.'},
-    // Add further words here //
-  ];
-  
-  let currentWordIndex = 0; // Keep track of the current word index
-  let currentWord = words[currentWordIndex]; // Initialize with the first word
-  
-  // Function to display a hint for the current word
-  const hintBtn = document.getElementById('hint-btn');
-  const hintDisplay = document.getElementById('hint-display');
-  
-  function displayHint() {
-    if (currentWordIndex < words.length) {
-      hintDisplay.textContent = words[currentWordIndex].hint;
-    }
   }
-  
-  hintBtn.addEventListener('click', () => {
-    if (hintDisplay.textContent !== '') {
+
+  // Event listener for help icon click
+  if (helpIcon) {
+      helpIcon.addEventListener('click', toggleHelpOverlay);
+  }
+
+  // Event listener for help close button click
+  if (helpCloseButton) {
+      helpCloseButton.addEventListener('click', () => {
+          if (helpOverlay) {
+              helpOverlay.classList.remove('active');
+          }
+      });
+  }
+});
+
+    // Selection of words for the game //
+    let words = [
+      { word: 'RHETORIC', scrambled: 'TRHCOREI', hint: 'This word refers to the art of persuasive speaking or writing.'},
+      { word: 'INNOCENT', scrambled: 'NINOTCEN', hint: 'This word describes someone who is not guilty.'},
+      { word: 'ACTIVATE', scrambled: 'TIVCAATE', hint: 'This word means to make something active or operative.'},
+      { word: 'FAMILIAR', scrambled: 'AMILAFRI', hint: 'This word signifies something well-known or easily recognized.'},
+      { word: 'SURROUND', scrambled: 'USURDRON', hint: 'This word means to encircle or envelop completely.'},
+      { word: 'MARRIAGE', scrambled: 'MAGERRAI', hint: 'This word refers to the union of two individuals in matrimony.'},
+      { word: 'CHAMPION', scrambled: 'MOPHICAN', hint: 'This word denotes a person who excels in a competition.'},
+      { word: 'STUBBORN', scrambled: 'BRNTUOBS', hint: 'This word refers to a person who is determined and unyielding.'},
+      { word: 'ATTITUDE', scrambled: 'DTTATIEU', hint: 'This word describes a settled way of thinking or feeling about something'},
+      { word: 'MEDICINE', scrambled: 'MDIENICE', hint: 'This word pertains to substances used for treating diseases.'},
+      { word: 'PROFOUND', scrambled: 'PFRDUNOO', hint: 'This word signifies something deep or intense.'},
+      { word: 'CONVINCE', scrambled: 'CNVNCOIE', hint: 'This word means to persuade or win over by argument.'},
+      { word: 'DEDICATE', scrambled: 'DEIDCTAE', hint: 'This word refers to commit oneself to a particular undertaking.'},
+      { word: 'ROMANTIC', scrambled: 'IMONRACT', hint: 'This word pertains to sentiments or actions associated with love.'},
+      { word: 'DISTANCE', scrambled: 'SITDNECA', hint: 'This word represents the extent or amount of space between two things.'},
+      { word: 'FLOURISH', scrambled: 'LFOSIUHR', hint: 'This word means to grow or develop in a healthy or vigorous way.'},
+      { word: 'UNLAWFUL', scrambled: 'NLUUFALW', hint: 'This word denotes something illegal or prohibited by law.'},
+      { word: 'APPROACH', scrambled: 'AORCPPAH', hint: 'This word signifies an initial approach or means of dealing with something.'},
+      { word: 'COLLAPSE', scrambled: 'LALEPSCO', hint: 'This word represents the sudden fall or breakdown of something.'},
+      { word: 'PARTICLE', scrambled: 'TPCLRIEA', hint: 'This word refers to a tiny or minute piece of matter.'},
+      { word: 'MOURNING', scrambled: 'NIMOURNG', hint: 'This word pertains to the expression of grief or sorrow.'},
+      { word: 'PORTRAIT', scrambled: 'RROAPTIT', hint: 'This word refers to a painting, drawing, or photograph of a person.'},
+      { word: 'MONOPOLY', scrambled: 'LMOOYNOP', hint: 'This word signifies exclusive control or possession of something.'},
+      { word: 'SYNERGIC', scrambled: 'GICYRENS', hint: 'This term relates to the combined or cooperative action of elements.'},
+      { word: 'ELEGANCE', scrambled: 'NCEEEGLA', hint: 'This word describes a refined and tasteful beauty or style.'},
+      { word: 'LAUGHTER', scrambled: 'RETHAGLU', hint: 'This term denotes the sound of merriment or amusement.'},
+      { word: 'DILIGENT', scrambled: 'DILGTEIN', hint: 'This word describes a person who is hardworking and conscientious.'},
+      { word: 'VIBRANTLY', scrambled: 'BARTYNIV', hint: 'This term signifies something full of energy, enthusiasm, or vigor.'},
+      { word: 'REVERSAL', scrambled: 'RESAELVR', hint: 'This word refers to a complete change in direction or policy.'},
+      { word: 'THRIVING', scrambled: 'RVTHIIGN', hint: 'This term describes a state of growing vigorously and prospering.'},
+      { word: 'GRADIENT', scrambled: 'GRIEDANT', hint: 'This word represents a gradual incline or slope.'},
+      { word: 'TRIUMPHS', scrambled: 'UPSTRIMH', hint: 'This term denotes great victories or achievements.'},
+      { word: 'CAUTIOUS', scrambled: 'TACIOUSU', hint: 'This word describes someone who acts with care and prudence.'},
+      { word: 'FREQUENT', scrambled: 'EEFQNTUR', hint: 'This term signifies happening or occurring frequently.'},
+      { word: 'GLIMMERS', scrambled: 'SLIMMREG', hint: 'This word represents faint, wavering light or shining particles.'},
+      { word: 'VORACIOUS', scrambled: 'COIOUSVAR', hint: 'This term describes someone with a very eager appetite.'},
+      { word: 'BLOSSOMS', scrambled: 'BSSOMLOS', hint: 'This word refers to the flowers on a plant, especially those of fruit trees.'},
+      { word: 'TOLERATE', scrambled: 'RATOTELE', hint: 'This word means to endure or accept something unpleasant.'},
+      { word: 'CREATORS', scrambled: 'SCTRAERO', hint: 'This term denotes those who bring something into existence.'},
+      { word: 'CHAOTIC', scrambled: 'COAICTH', hint: 'This word describes a state of complete disorder and confusion.'},
+      { word: 'RATIONAL', scrambled: 'LITARNOA', hint: 'This term relates to the use of reason or logical thinking.'},
+      { word: 'STURDIER', scrambled: 'TRDIEUSR', hint: 'This word describes something more robust, solid, or durable.'},
+      { word: 'MAGNETIC', scrambled: 'CIGAMNET', hint: 'This term pertains to the attractive or captivating quality of something.'},
+  ];
+
+let currentWordIndex = 0; // Keep track of the current word index
+let currentWord = words[currentWordIndex]; // Initialize with the first word
+
+// Function to display a hint for the current word
+const hintBtn = document.getElementById('hint-btn');
+const hintDisplay = document.getElementById('hint-display');
+
+function displayHint() {
+  if (currentWordIndex < words.length) {
+      hintDisplay.textContent = words[currentWordIndex].hint;
+  }
+}
+
+hintBtn.addEventListener('click', () => {
+  if (hintDisplay.textContent !== '') {
       // Hide the hint message if it's already displayed
       hintDisplay.textContent = '';
-    } else {
+  } else {
       displayHint(); // Display the hint if it's not displayed
-    }
-  });
-  
-  const letterContainer = document.getElementById('letter-container');
+  }
+});
 
-  // Attach touch event listeners to the letter containers
-  letterContainer.addEventListener('touchstart', handleTouchStart);
-  letterContainer.addEventListener('touchmove', handleTouchMove);
-  letterContainer.addEventListener('touchend', handleTouchEnd);
+// Letter container and boxes
+const letterContainer = document.getElementById('letter-container');
+const boxes = document.querySelectorAll('.box');
+const submitBtn = document.getElementById('submit-btn');
+const deleteBtn = document.getElementById('delete-btn');
+let removedLetters = [];
 
-  const boxes = document.querySelectorAll('.box');
-  const submitBtn = document.getElementById('submit-btn');
-  const deleteBtn = document.getElementById('delete-btn');
-  let removedLetters = [];
-  
-  // Function to create letter containers
-  function createLetterContainers() {
-    const scrambledLetters = currentWord.scrambled.split('');
-    scrambledLetters.forEach(letter => {
+// Function to create letter containers
+function createLetterContainers() {
+  const scrambledLetters = currentWord.scrambled.split('');
+  scrambledLetters.forEach(letter => {
       const div = document.createElement('div');
       div.textContent = letter;
       div.classList.add('letter');
       div.setAttribute('draggable', true);
       letterContainer.appendChild(div);
-    });
-  }
-  
-  // Function to setup the game for the next word
-  function setupGameForNextWord() {
-    letterContainer.innerHTML = ''; // Clear previous letters
-    boxes.forEach(box => (box.innerHTML = '')); // Clear previous boxes
-  
-    currentWord = words[currentWordIndex]; // Set the current word to the next word
-    createLetterContainers(); // Load letters for the next word
-    attachDragAndDropListeners(); // Drag-and-drop listeners to the new set of letters
-  }
-  
-  // Function to handle drag-and-drop listeners for the letters
-  function attachDragAndDropListeners() {
-    const letters = document.querySelectorAll('.letter');
-  
-    letters.forEach(letter => {
+  });
+}
+
+// Function to setup the game for the next word
+function setupGameForNextWord() {
+  letterContainer.innerHTML = ''; // Clear previous letters
+  boxes.forEach(box => (box.innerHTML = '')); // Clear previous boxes
+
+  currentWord = words[currentWordIndex]; // Set the current word to the next word
+  createLetterContainers(); // Load letters for the next word
+  attachDragAndDropListeners(); // Attach drag-and-drop listeners to the new set of letters
+}
+
+// Function to handle drag-and-drop listeners for the letters
+function attachDragAndDropListeners() {
+  const letters = document.querySelectorAll('.letter');
+
+  letters.forEach(letter => {
       letter.addEventListener('dragstart', () => {
-        letter.classList.add('dragging');
+          letter.classList.add('dragging');
       });
-  
+
       letter.addEventListener('dragend', () => {
-        letter.classList.remove('dragging');
+          letter.classList.remove('dragging');
       });
-  
+
       letter.addEventListener('click', () => {
-        const targetBox = document.querySelector('.dragging');
-        if (targetBox !== null) {
-          targetBox.textContent = letter.textContent;
-          letter.remove();
-        }
+          const targetBox = document.querySelector('.dragging');
+          if (targetBox !== null) {
+              targetBox.textContent = letter.textContent;
+              letter.remove();
+          }
       });
-    });
-  }
-  
-  createLetterContainers();
-  attachDragAndDropListeners(); // Drag-and-drop listeners to the initial set of letters
-  
-  boxes.forEach(box => {
-    box.addEventListener('dragover', e => {
+  });
+}
+
+// Initial setup
+createLetterContainers();
+attachDragAndDropListeners(); // Attach drag-and-drop listeners to the initial set of letters
+
+// Event listeners for drag and drop functionality
+boxes.forEach(box => {
+  box.addEventListener('dragover', e => {
       e.preventDefault();
-    });
-  
-    box.addEventListener('drop', e => {
+  });
+
+  box.addEventListener('drop', e => {
       const draggedLetter = document.querySelector('.dragging');
       if (draggedLetter && box.children.length === 0) {
-        box.appendChild(draggedLetter);
+          box.appendChild(draggedLetter);
       }
-    });
   });
-  
-// Function to display modal messages including completion message
+});
+
+// Function to display modal messages
 function displayModalMessage(message) {
   const modal = document.getElementById('modal');
   const modalMessage = document.getElementById('modalMessage');
@@ -156,9 +176,9 @@ function displayModalMessage(message) {
   // Close modal when the close button is clicked
   const modalCloseButton = document.querySelector('.modalCloseButton');
   if (modalCloseButton) {
-    modalCloseButton.addEventListener('click', function() {
-      modal.style.display = 'none';
-    });
+      modalCloseButton.addEventListener('click', function() {
+          modal.style.display = 'none';
+      });
   }
 }
 
