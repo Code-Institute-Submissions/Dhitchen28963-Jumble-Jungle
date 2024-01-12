@@ -356,6 +356,10 @@ th {
     height: 50px;
   }
 
+  .help-text-content {
+    margin-top: 55px;
+  }
+
   /* Styles for the 8 boxes and the box-container within the game.html */
   #box1,
   #box2,
@@ -636,13 +640,14 @@ th {
   }
 
   .help-text-content {
-    padding-top: 5px;
+    padding-top: 20px;
   }
 
   .help-text-content ol,
   .help-text-content ul {
     text-align: left;
     margin-left: 60px;
+    font-size: 28px;
   }
 
   /* Styles for the 8 boxes and the box-container within the game.html */

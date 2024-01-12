@@ -29,7 +29,7 @@
 ## User Experience
 
 ### 5trategy Plane
-The strategy plan for Jumble Jungle was to create a game with no timer but an abudance of words. The user can only have their name on the leaderboard if they complete all the words. Jungle Jumbles aim was to create a colourful and captivating online game, while keeping users engaged.
+The strategy plane for Jumble Jungle was to create a game with no timer but an abudance of words. The user can only have their name on the leaderboard if they complete all the words. The Jumble Jungle game aims to create a colourful and captivating online game, while keeping users engaged.
 
 #### Objectives
 * User Engagement: Create a game that captivates and engages users, encouraging them to spend time playing and enjoying the experience. 
@@ -75,6 +75,9 @@ An easy to use navigation is implemented onto all pages with easily identifiable
 **Navigation Buttons**
 The navigation buttons are easily identifiable and work with both a mouse click and touch. They are also positioned in sections of the background image that minimise any readbility related issues.
 ![Index main menu buttons (Play & Leaderboard)](assets/images/readme-images/index.html-buttons.png)
+![Play Button](assets/images/readme-images/leaderboard.js-jshint.png)
+![Leaderboard Button](assets/images/readme-images/leaderboard.js-jshint.png)
+
 **Background Image**
 The background image is responsive and although no specific H1 element is visble, the logo in the background image is responsive and moves to fit the screen depending on the screen size.
 ![Background image for laptop, monitors and tv screen sizes](assets/images/readme-images/index.html-page-large.png)
@@ -90,6 +93,7 @@ The leaderboard page is a simple table which prepopulates when users complete th
 **Navigation Buttons**
 The navigation buttons are easily identifiable and work with both a mouse click and touch.
 ![Image of the leaderboard button](/workspace/Jumble-Jungle/assets/images/readme-images/leader-board-button-image.webp)
+![Home Button](assets/images/readme-images/leaderboard.js-jshint.png)
 **Leaderboard Table**
 The leaderboard table is simpliestic and uses a local storage to add the name of the user who completes the game.
 ![Image of the leaderboard with a winner listed in the leaderboard table](assets/images/readme-images/leaderboard-input-game-complete.png)
@@ -108,6 +112,9 @@ The help overlay offers precise and condensed information that outlines the purp
 **Navigation Buttons**
 Should the user wish to return to the main menu, restart the game or require help with the game then all the navigations icons/buttons are readily available.
 ![Home, Restart & Help buttons](assets/images/readme-images/game-html-buttons.png)
+![Restart Button](assets/images/readme-images/leaderboard.js-jshint.png)
+![Help Button](assets/images/readme-images/leaderboard.js-jshint.png)
+![Home Button](assets/images/readme-images/leaderboard.js-jshint.png)
 **Game Buttons**
 Due to the user friendly layout and the ease of navigation the user will be able to navigate the page, and interact with the game.
 ![Submit, Hint and Delete buttons to allow users to interact with the game](assets/images/readme-images/game-buttons-image.png)
@@ -123,112 +130,72 @@ Should the user make an invalid selection, or establish the correct word, or win
 Should the user win the game then they will be given the opportunity to input thier name and be displayed on the leaderboard.
 ![Name input when a user wins the game](assets/images/readme-images/name-input-after-game-complete.png)
 
-
-
-![Letter container where the letters associated with the word will be displayed](assets/images/readme-images/letter-container.png)
-        ![Screenshot to illustrate a unsuccessful or incorrect reservations form submission](assets/images/readme-images/leaderboard-background-image.png)
-![Screenshot to illustrate a unsuccessful or incorrect reservations form submission](assets/images/readme-images/leaderboard-background-image.png)
-### Menu.html page (Menu page)
-The Menu page has a quick navigation anchor link for all four sections of the menu including lunch, dinner, dessert and wine menus.
-![Lunch, dinner, desserts and wine menu](assets/images/readme-images/menu-navigation-for-menu.png)
-
-In addition to the above there is also an anchor element found at the bottom of the lunch, dinner, dessert and wine menu that will allow the user to quickly scroll back up to the menu navigation as the menu is enlongated when on smaller screens.
-
-![Anchor link found at the bottom of each menu to revert back to the menu navigation](assets/images/readme-images/menu-navigation-anchor.png)
-
-### Lunch Menu
-The lunch menu contains starters, mains, three course details in addition to allergy and intolerance advice. Furthermore infromation regarding VAT can be found. Its important to note the allergy and intolerance advice is shown at the bottom of the lunch, dinner and dessert menu. The description of the items are also available.
-![Lunch, starters and mains menu](assets/images/readme-images/lunch-menu-starters-and-mains.png)
-
-### Dinner Menu
-The dinner menu contains starters, mains, three course details in addition to allergy and intolerance advice. Furthermore infromation regarding VAT can be found. The description of the items are also available.
-![Dinner, starters menu](assets/images/readme-images/dinner-menu-starters-and-mains.png)
-
-### Dessert Menu 
-The dessert menu contains starters, mains in addition to allergy and intolerance advice. Furthermore infromation regarding VAT can be found. The description of the items are also available.
-![Dessert menu (1 of 2)](assets/images/readme-images/dessert-menu-part-1.png)
-![Dessert menu (2 of 2)](assets/images/readme-images/dessert-menu-part-2.png)
-
-### Wine Menu
-The wine menu showcases all the wines available to compliment the customers meals, ranging from white, red, Italian and Spanish including the origin of some but more importantly the price. The description of the items are also available.
-![Wine menu - White wines](assets/images/readme-images/wine-menu-white-wine.png)
-![Wine menu - Red wines](assets/images/readme-images/wine-menu-red-wine.png)
-![Wine menu - Italian wines](assets/images/readme-images/wine-menu-italian-wine.png)
-![Wine menu - Spanish wines](assets/images/readme-images/wine-menu-spanish-wine.png)  
-
-
 ### Structure Plane
-#### Home Page:
-**Welcome Section:** Introduction to La Citadelle, showcasing its ambiance and specialty with capivating images.
-**About Section:** Brief overview highlighting the restaurants qualities.
-**Reservation Call-to-Action:** Prominent button or section for easy access to make reservations.
-**Opening times:** Details opening and closing times of the restaurant.
+Welcome to Jumble Jungle, an engaging word puzzle game designed for both fun and mental stimulation. The game boasts a user-friendly interface with prominent buttons for easy navigation, including Play, Leaderboard, Restart, Help, and Home. The minimalist design ensures that players remain focused on the main game area, which features a letter container and a box-container. Captivating background images enhance the overall experience without distracting players from the exciting challenge of unscrambling words. Whether you're a word enthusiast or simply looking for an entertaining brain teaser, Jumble Jungle provides an immersive and enjoyable gameplay experience for all.
 
+#### Home page(index.html):
+Colourful background image with two buttons. A homepage should embody simplicity and minimalism in its design. There are two buttons on this page which are clearly visible.
 
-#### Gallery Page:
-**Photo Gallery:** Showcasing high-quality images of the restaurant's interior, dishes, and ambiance.
+#### Leaderboard page(leaderboard.html):
+A colourful leaderboard page which offers details about past winners, featuring a minimalist design that prioritizes the game as the main focus. There is one button the page which will divert the user back to the homepage.
 
-#### Menu Page:
-**Featured Menu Section:** Displaying select dishes or seasonal specials.
-**Detailed Dish Listings:** Individual pages or sections for each dish with descriptions, images, and pricing.
-**Allergy and intolerance disclaimers:** Disclaimer for allergy and intolerances
-
-#### Reservations Page:
-**Reservation Form:** User-friendly form to book tables with date, time, party size, and contact details.
-**Reservation Policies:** Clear information regarding reservation charges and VAT, etc.
-**Special Dietary Options:** Ability to allow user to indicate special requests or dietary preferences.
-
-#### Contact Information:
-**Location and Hours:** Address, map, and operating hours of the restaurant.
-**Contact Details:** A form for general inquiries or feedback.
-**Contact Information:** Phone number, email, and links to social media profiles.
-
-#### Footer Section:
-**Social media links:** Links to La Citadelle's social media profiles.
-**Contact & address information:** Physical address in addition to telephone and email.
-**Copyright Information:** Statement about the website's ownership and rights.
+#### Game page(game.html):
+The gaming page features the central gaming section with a letter container and a box-container. Alongside, there are three buttons for easy navigation – one leading to the homepage, another providing game information, and the third allowing the user to restart the game. Complementing the layout, there's a background image and three more buttons that interact with the game directly. These include a hint button for user assistance, a delete button enabling move reversal, and a submit button for making inputs and playing the game.
 
 #### Additional Functionalities:
 **Responsive Design:** Ensuring the website works seamlessly across various devices (desktop, tablet, mobile).
-**Navigation Menu:** Quick access to important pages.
+**Navigation Buttons:** Quick access to important pages.
 
 
 ### Skeleton Plane
+
 #### Home Page:
+Background Image: Colourful and welcoming background image which contains a responsive title within the image itself.
+Play Button: Initiates the game, leading the player to the main game area.
+![Play Button](assets/images/play-button-image.webp)
+Leaderboard Button: Allows players to view information on previous winners, emphasizing a minimalist display.
+![Leaderboard Button](assets/images/leader-board-button-image.webp)
 
-**Header Section:**
-Logo of La Citadelle and navigation menu for easy access to different pages.
+#### Game Page:
+Background Image: Captivating visuals that enhance the gaming experience without causing distraction.
 
-**Image:**
-Captivating images showcasing the restaurant's ambiance.
+Box-Container: Contains boxes where players drag and drop letters to form the correct word.
+![Box container](assets/images/readme-images/box-container.png)
 
-**About Section:**
-Brief overview text about the restaurant's history.
-Narrative about La Citadelle's amd the head chef chef.
+Boxes: Eight boxes within the box-container where the letters are placed.
+![Letter container](assets/images/readme-images/box-larger-image.webp)
 
-**Contact Us Section:** 
-Concise welcome message with a call-to-action button for reservations.
-Contact information including address.
+Letter Container: Displays scrambled letters for players to rearrange into an 8-letter word.
+![Letter container](assets/images/readme-images/letter-container.png)
 
-**Opening times**
-The opening and closing times are clearly displayed.
+**Buttons for Interaction:**
+Help Button: Provides guidance on how to play the game, ensuring accessibility for all players.
+![Help Button](assets/images/readme-images/help-button-image.webp)
+Hint Button: Offers players a hint when needed, enhancing the gameplay experience.
+![Hint Button](assets/images/readme-images/hint-button.png)
+Delete Button: Allows players to undo a move, adding a strategic element to the game.
+![Delete Button](assets/images/readme-images/delete-button.png)
+Submit Button: Enables players to input their word and progress in the game.
+![Submit Button](assets/images/readme-images/submit-button.png)
 
-**Menu Page:** 
-Menu Categories with clearly labeled sections for starters, main courses, desserts, and drinks.
-Each section displaying descriptions of dishes with names and prices and ingredients.
+**Buttons for Navigation:**
+Home buton will direct the user back to the home page.
+![Home Button](assets/images/home-button-image.webp)
 
-**Menu Section:**
-Highlighting select dishes with appealing images and brief descriptions including prices and allergy and intolerance disclaimer
+Restart Button: Enables players to restart the current game, maintaining a seamless gaming experience This button effectively refreshs the game.html page.
+![Restart Button](assets/images/restart-game-button-image.webp)
 
-**Reservations Page:**
-Reservation Form: User-friendly form to select date, time, party size, and contact details.
+#### Leaderboard Page:
 
-**Navigation Links:**
-Quick access to essential pages.
+Minimalistic View: Emphasizes simplicity in presenting information about previous winners, maintaining focus on the game.
+Home Button: Offers quick navigation back to the homepage for user convenience.
+![Home Button](assets/images/home-button-image.webp)
 
-**Social Media Links:**
-Icons or links to La Citadelle's social media profiles.
-Copyright Information:
+**Overall Design Philosophy:**
+User-Friendly Interface: Ensures ease of navigation with prominently placed buttons.
+Minimalist Design: Focuses on the essential game elements, providing a clean and enjoyable user experience.
+Immersive Gameplay: Balances captivating background images with a design that keeps players engaged in the word puzzle challenge.
+By incorporating these elements, Jumble Jungle aims to provide players with a delightful and intellectually stimulating game.
 
 **Responsive Design:**
 **User friendly** Ensuring the layout adjusts seamlessly for various screen sizes (desktop, tablet, mobile).
@@ -237,99 +204,117 @@ Copyright Information:
 
 ### Surface Plane
 
-Visual Design:
-Color Palette: Neutral colors of white, black and grey were selected to complement the restaurant's ambiance.
-Typography: Ensured readability across different devices and screen sizes by selecting readable and elegant fonts for headings, body text, and other elements that match the restaurant's style. 
-Imagery and Graphics: Used high-quality images that showcase the restaurant's interior, cuisine, and ambiance. Incorporate visuals that evoke a sense of luxury and culinary excellence including images of the chefs.
-Iconography: Employ icons or graphical elements to enhance visual appeal and aid in navigation.
+**Objective:**
+Guess and arrange scrambled letters to form 8-letter words.
 
-Layout and Structure:
-Hierarchical Structure Implemented a consistent layout that is user friendly whilst providing clear and concise information.
-Whitespace: Used ample whitespace for a clean and uncluttered appearance, allowing content to breathe and enhancing readability.
-Responsive Design: Ensured the website is mobile-friendly, adapting seamlessly to different screen sizes without compromising aesthetics or functionality.
+**Navigation:**
+Homepage:
+Play Button: Start the game.
+Leaderboard Button: View previous winners.
+Restart Button: Begin a new game.
+Help Button: Access game instructions.
+Home Button: Return to the homepage.
 
-User Interface (UI) Elements:
-Navigation Menu: Desiged an intuitive and user-friendly navigation menu that is easy to locate and use. Used hamburger menu for mobile devices.
-Buttons and Call-to-Actions: Used visually appealing buttons that stand out and encourage users to take action, such as making reservations or exploring the menu.
-Forms and Input Fields: Designed clear and user-friendly forms for reservations or inquiries, with easily identifiable input fields and appropriate feedback upon submission.
+**Main Game Area:**
+Letter Container: Displays scrambled letters.
+Box-Container: Allows drag-and-drop for arranging letters.
+Background Images: Engaging visuals without distraction.
 
-Interactive Elements:
-Hover Effects: Implemented subtle hover effects on buttons, links, or images to provide visual feedback and enhance user interaction.
-Animations and Transitions: Incorporate smooth and purposeful animations or transitions to improve user experience and engagement without being overwhelming.
+**Interaction:**
+Hint Button: Provides clues to the word.
+Delete Button: Allows undoing a move.
+Submit Button: Input the formed word and progress.
+
+**Scoring:**
+Completion of each word advances the player.
+Leaderboard showcases top players.
+
+**Help Section:**
+Clear instructions on gameplay.
+Tips for successful word formation.
+
+**Design Philosophy:**
+User-Friendly: Easy navigation and intuitive controls.
+Minimalistic: Focus on essential elements for a clean interface.
+Immersive: Balancing captivating visuals with gameplay.
+
+**Conclusion:**
+Jumble Jungle offers an engaging word puzzle experience with a user-friendly interface, minimalist design, and captivating visuals. Players can navigate easily, access help when needed, and enjoy the challenge of unscrambling words to progress and compete for a spot on the leaderboard.
 
 
 ## Testing
-
 Below is a table showing various actions performed on the website including the expected/desired outcome with the result on the final column.
 
 | Action                                                                                    |Expected Result                                                                                    | Result                                                 |
 | :---------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ | :----------------------------------------------------- |
 | Load index.html page                                                                      | The Homepage should load                                                                          | Homepage loaded                                        |
-| Load menu-html page                                                                       | The Menu page should load                                                                         | Menu page loaded                                       |
-| Load bookins.html                                                                         | The Book now page should load                                                                     | Book now page loaded                                   |
-| Click on the h1 logo                                                                      | The page should refresh if currently on the home page or divert user to the homepage if not       | Home page loaded                                       |
-| Click on menu icon (hamburg) when on screens less than 774px width                        | The nav drop down menu should reveal all the nav options Home, About Us, Book Now, Menu, Contact  | Navigation menu dropped                                |
-| Scroll images on scroll.container found underneath the header                             | The imagess move left to right with touch, keyboard or using scroller                             | Images scrolled - left to right                        |
-| Click the CLICK HERE on the contact us section of the homepage                            | The bookings page should load where the user can complete the reservations form                   | Bookings page loaded                                   |
-| Click the Facebook social media link found in the footer at the bottom of all html pages  | Facebook site should load                                                                         | Facebook loaded                                        |
-| Click the X (formally known as Twitter) social media link found in the footer             | Twitter (X) site should load                                                                      | Twitter (X) loaded                                     |
-| Click the Youtube social media link found in the footer at the bottom of all html pages   | Youtube site should load                                                                          | Youtube loaded                                         |
-| Click the Instagram social media link found in the footer at the bottom of all html pages | Instagram siteshould load                                                                         | Instragram loaded                                      |
-| Click About Us on the header (both desktop and mobile device)                             | The user should be directed to the About us section found on the homepage                         | Page scrolled to About us section                      |
-| Click Book Now on the header (both desktop and mobile device)                             | The user should be directed to the Book Now page (bookings.html)                                  | Book now page loaded                                   |
-| Click Menu on the header (both desktop and mobile device)                                 | The user should be directed to the Menu page (menu.html)                                          | Menu page loaded                                       |
-| Click Contact on the header (both desktop and mobile device)                              | The user should be directed to the Contact us section found on the homepage                       | Page scrolled to Contact us section                    |
-| Fill in the reservations form on the bookings.html                                        | The user will receive a confirmation of receipt and the details inputted                          | Received confirmation of receipt with details          |
-| Fill in the reservations form on the bookings.html with invalid input                     | The user will receive a pop up notification to confirm error with input                           | Pop up message shown with prompt                       |
-| Click the Lunch anchor at the top of the menu.html page                                   | The user will be redirected to the top of the Lunch Menu                                          | Redirected to Lunch menu                               |
-| Click the Dinner anchor at the top of the menu.html page                                  | The user will be redirected to the top of the Dinner Menu                                         | Redirected to dinner menu                              |
-| Click the Desserts anchor at the top of the menu.html page                                | The user will be redirected to the top of the Desserts Menu                                       | Redirected to dessert menu                             |
-| Click the Wine anchor at the top of the menu.html page                                    | The user will be redirected to the top of the Wine Menu                                           | Redirected to wine menu                                |
-| Click the BACK TO TOP anchor at the bottom of the lunch menu                              | The user should be directed to the top of the menu back to the menu navigation                    | Scrolled back up to menu navigation on top of the menu |
-| Click the BACK TO TOP anchor at the bottom of the dinner menu                             | The user should be directed to the top of the menu back to the menu navigation                    | Scrolled back up to menu navigation on top of the menu |
-| Click the BACK TO TOP anchor at the bottom of the desserts menu                           | The user should be directed to the top of the menu back to the menu navigation                    | Scrolled back up to menu navigation on top of the menu |
-| Click the BACK TO TOP anchor at the bottom of the wine menu                               | The user should be directed to the top of the menu back to the menu navigation                    | Scrolled back up to menu navigation on top of the menu |
-| Expand screen size bookings page                                                          | The background image should be revealed                                                           | Background image revealed                              |
-| Expand screen size menu page                                                              | The background images should be revealed (1 for each menu - four in total)                        | Background image revealed                              |
+| Load leaderboard-html page                                                                | The leaderboard page should load                                                                  | leaderboard page loaded                                |
+| Load game.html page                                                                       | The game page should load                                                                         | Game.html page loaded                                  |
+| Click on the h1 logo on the leaderboard page                                              | The user should divert user to the homepage                                                       | Home page loaded                                       |
+| Click home button on the leaderboard page (both desktop and mobile device)                | The user should be directed to the homepage (index.html)                                          | Homepage loaded                                        |
+| Click play button on homepage (both desktop and mobile device)                            | The user should be directed to the game.html page                                                 | Game page loaded                                       |
+| Click leaderboard button on the homepage(both desktop and mobile device)                  | The user should be directed to the leaderboard.html page                                          | Leaderboard page loaded                                |
+
+| Click home button on the game page (both desktop and mobile device)                       | The user should be directed to the homepage (index.html)                                          | Homepage loaded                                        |
+| Click help button on the game page (both desktop and mobile device)                       | The help overlay should be displayed                                                              | Help overlay displayed                                 |
+| Click restart button on the game page (both desktop and mobile device)                    | The game page should refresh                                                                      | Game page loaded                                       |
+| Click hint button on the game page (both desktop and mobile device) (not visible)         | The hint associated with the word should be displayed                                             | Hint displayed                                         |
+| Click hint button on the game page (both desktop and mobile device) (visible)             | The hint associated with the word should no longer be displayed                                   | Hint not displayed                                     |
+| Click submit button on the game page (both desktop and mobile device) Correct             | Chosen word inputted (Correct notification will be displayed and user will move on to next word)  | Correct notification displayed and next word loaded    |
+| Click submit button on the game page (both desktop and mobile device) Incorrect           | Chosen word inputted (Incorrect notification will be displayed and user will be able to try again)| Correct notification displayed                         |
+| Click submit button on the game page (both desktop and mobile device) Final word          | Chosen word inputted (Congratulations notification will display and name input should be shown)   | Correct notification displayed and name input box shown|
+| User inputs name after completing game(both desktop and mobile device)                    | User should be able to type name and be diverted to leaderboard where this will be displayed      | Name input accepted and diverted to leaderboard        |
+| Click delete button on the game page (both desktop and mobile device)                     | The inputs.letters should be removed (1 letter per touch/click)                                   | Letter(s) deleted                                      |
+| Touch letters using touch screen on the game page (both laptop and mobile device)         | The letter should go to the next available box within the box container                           | Letters move as they should                            |
+| Click, drag and drop letters on the game page (both desktop and mobile device)            | The user should be able to place the letters in any box                                           | Letters move as they should                            |
 
 ## Validator Testing
 
 ### HTML
-No erros were report when passing through the official W3C HTML validator.
+No errors were report when passing through the official W3C HTML validator.
 
 #### index.html
-![Screenshot showing html validator for the index.html page - no errors found](assets/images/readme-images/html-validator-index.html.png)
+![HTML Validator - index.html](assets/images/readme-images/index.html-validator-image.png)
 
-#### menu.html
-![Screenshot showing html validator for the menu.html page - no errors found](assets/images/readme-images/html-validator-menu.html.png)
+#### game.html
+![HTML Validator - game.html](assets/images/readme-images/game.html-validator-image.png)
 
-#### bookings.html
-![Screenshot showing html validator for the bookings.html page - no errors found](assets/images/readme-images/html-validator-bookings.html.png)
+#### leaderboard.html
+![HTML Validator - leaderboard.html](assets/images/readme-images/leaderboard.html-validator-image.png)
 
 ### CSS
-* No erros were report when passing through the official W3C CSS validator.
-![Screenshot showing css validator for the style.css page - no errors found](assets/images/readme-images/css-validator-style.css.png)
+* No errors were report when passing through the official W3C CSS validator.
+![CSS Validator](assets/images/readme-images/CSS-Validator-image.png)
+
+
+### Javascript
+* No errors were report when passing through the official JSHINT JS validator.
+![Javascript Validator - game.js](assets/images/readme-images/game.js-jshint.png)
+![Javascript Validator - leaderboard.js](assets/images/readme-images/leaderboard.js-jshint.png)
+
+
 
 ## Accessibility
 * I confirmed that the colors and fonts chosen are easy to read and accessible by performing analysis using Lighthouse in Devtools. I conduct a scan on each page and the results of both the mobile and desktop scans are below:
 
-#### index.html desktop results
-![Screenshot from lighthouse report using developer tools for desktop version of index.html](assets/images/readme-images/lighthouse-index.html-desktop.png)
+#### Index.html desktop results
+![Google chrome lighthouse screenshot - index.html(Desktop)](assets/images/readme-images/ligthouse-desktop-index.html-image.png)
 
-#### index.html mobile results
-![Screenshot from lighthouse report using developer tools for mobile version of index.html](assets/images/readme-images/lighthouse-index.html-mobile.png)
+#### Index.html mobile results
+![Google chrome lighthouse screenshot - index.html(Mobile)](assets/images/readme-images/lighthouse-mobile-html.index-image.png)
 
-#### menu.html desktop results
-![Screenshot from lighthouse report using developer tools for mobile version of menu.html](assets/images/readme-images/lighthouse-menu.html-mobile.png)
+#### Game.html desktop results
+![Google chrome lighthouse screenshot - game.html(Desktop)](assets/images/readme-images/lighthouse-desktop-game.html-image.png)
 
-#### menu.html mobile results
-![Screenshot from lighthouse report using developer tools for desktop version of menu.html](assets/images/readme-images/lighthouse-menu.html-desktop.png)
+#### Game.html mobile results
+![Google chrome lighthouse screenshot - game.html(Mobile)](assets/images/readme-images/ligthouse-mobile-game.html-image.png)
 
-#### bookings.html desktop results
-![Screenshot from lighthouse report using developer tools for mobile version of bookings.html](assets/images/readme-images/lighthouse-bookings.html-mobile.png)
+#### Leaderboard.html desktop results
+![Google chrome lighthouse screenshot - leaderboard.html(Desktop)](assets/images/readme-images/ligthouse-desktop-leaderboard.html-image.png)
 
-#### bookings.html mobile results
-![Screenshot from lighthouse report using developer tools for desktop version of bookings.html](assets/images/readme-images/lighthouse-bookings.html-desktop.png)
+#### Leaderboard.html mobile results
+![Google chrome lighthouse screenshot - leaderboard.html(Mobile)](assets/images/readme-images/lighthouse-mobile-leaderboard..html-image.png)
+
 
 ## Browser Testing
 * I conducted browser testing on various devices and web browsers and they are listed below:
@@ -350,15 +335,9 @@ No erros were report when passing through the official W3C HTML validator.
 **Apple Imac**
 
 ## Bugs
-* While deploying my site to GitHub pages the background images did not load. After reviewing the code it was established that the URL needed to be amended from:
+* While reviewing my site i received an error shown below which indicated that I was not able to use an attribute. This was subsubsequently removed
 
-assets/images/background-dinner-menu-image.webp to ../images/background-dinner-menu-image.webp
-assets/images/background-dessert-menu-image.webp to ../images/background-dinner-menu-image.webp
-assets/images/background-form-image.webp to ../images/background-dinner-menu-image.webp
-assets/images/background-lunch-menu-image.webp to ../images/background-dinner-menu-image.webp
-assets/images/background-wine-menu-image.webp to ../images/background-dinner-menu-image.webp
- to
-
+![Google chrome lighthouse screenshot - leaderboard.html(Mobile)](assets/images/readme-images/bug-game.html.png)
 
 ## Unfixed Bugs
 * No unfixed bugs.
@@ -373,9 +352,6 @@ For Font styles of header.
 [DevTools](https://developer.chrome.com/docs/devtools/)
 For improvement and use of device eumulators.
 
-[Font Awesome](https://fontawesome.com/)
-For Font styles including icons in footer.
-
 [ChatGPT 3.5](https://chat.openai.com/)
 For swiftly reviewing code to find discrepancies including spell checking.
 
@@ -385,16 +361,17 @@ For the validation of the index.html, bookings.html, and the menu.html.
 [CSS Validation Service](https://jigsaw.w3.org/css-validator/)
 For the validation of the style.css
 
-[Pixabay](https://pixabay.com/)
-For the use of images
+[Microsoft Bing ai image creator](https://www.bing.com/chat)
+For creating images relevant to my game design
 
-[Shutterstock](https://www.shutterstock.com/)
-For the use of images
+[Photopea](https://www.photopea.com/)
+For the editing of images.
 
 ### Languages
 
 **HTML**
 **CSS**
+**JS**
 
 ## Deployment
 * The site was deployed to GitHub pages. The steps to deploy are as follows:
@@ -402,15 +379,11 @@ For the use of images
     *From the source section drop-down menu, select the Master Branch.
     *Once the master branch has been selected, the page provided the link to the completed website.
 
-The link can be found here - [La Citadelle](https://dhitchen28963.github.io/La-Citadelle-Project1/)
+The link can be found here - [Jumble Jungle]()
 
 ## Credits
 
-**Content**
-* The code to make the social media links was extracted from the Code Institutes Love Running Project (Special thanks to Jo Heyndels) - credits provided here and within the page as a comment under the relevant sections.
-
 **Media**
-* All backgrounds images were downloaded from [Shutterstock](https://www.shutterstock.com/) and our licensed for use (5 in total).
-* All chef images in the scroll container were downloaded from [Shutterstock](https://www.shutterstock.com/) and our licensed for use (6 in total).
-* The remaining 9 images in the scroll container were downloaded from [Pixabay](https://pixabay.com/)and our licensed for use.
+* All images were downloaded from [Microsoft Bing ai image creator](https://www.bing.com/chat)
+* All images were edited using [Photopea](https://www.photopea.com/)
 
