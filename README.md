@@ -40,15 +40,15 @@ The strategy plane for Jumble Jungle was to create a game with no timer but an a
 * Hint System: Implement a hint system that assists players when needed, ensuring that the game remains accessible to a broad audience, including players of varying skill levels. 
 * Feedback Mechanism: Incorporate feedback mechanisms to inform players of correct or incorrect guesses, providing a dynamic and responsive gaming experience. 
 * Game Progression: Establish a sense of progression, perhaps through levels or stages, to keep players motivated to advance through the game. 
-* Monetization (future endeavors): If the game could be monetized, then the cost to make the game would be low and it would be easy to add more words to keep users engaged. 
+* Monetization (future endeavours): If the game could be monetized, then the cost to make the game would be low and it would be easy to add more words to keep users engaged. 
 * Testing and Optimization: Regularly test the game to identify and fix bugs, optimize performance, and ensure a smooth gaming experience across different devices. 
 
 ### Scope Plane
 
 #### Features 
-Jumble Jungle was created to provide a fun, engaging and low cost and maintenace game for all to play whilst be challenging and inviting. This game is meant to be enjoyable and perhaps a game that users could enjoy or perhaps just to pass the time.
+Jumble Jungle was created to provide a fun, engaging and low cost and maintenance game for all to play whilst be challenging and inviting. This game is meant to be enjoyable and perhaps a game that users could enjoy or perhaps just to pass the time.
 
-As you can see from the image below the website is compatible on all device screen sizes from the Galaxy Fold (280px screen width) and above. The layout ensures easement of gameplay with consideration as to where the buttons were located so if the user is using there phone then it minimising strain on the users hands.
+As you can see from the image below the website is compatible on all device screen sizes from the Galaxy Fold (280px screen width) and above. The layout ensures easement of gameplay with consideration as to where the buttons were located so if the user is using their phone then it minimises strain on the users hands.
 
 ![Amiresponsive image which shows website on different screen sizes](assets/images/readme-images/amiresponsive.png)
 
@@ -62,11 +62,11 @@ As you can see from the image below the website is compatible on all device scre
 ##### Navigation menu on devices with a screen width above 1447px width
 ![Header screenshot showing main header and navigation menu when on desktop](assets/images/readme-images/index.html-page-large.png)
 
-An easy to use navigation is implemented onto all pages with easily identifiable and distinguisable icons for Home, Play, Leaderboard, Restart and Help/Information.
+An easy to use navigation is implemented onto all pages with easily identifiable and distinguishable icons for Home, Play, Leaderboard, Restart and Help/Information.
 
 **Home**, Which will revert back to the main page (index.html), this is a simplistic main menu with two options (Leaderboard or Game)
 **Leaderboard**, Which will allow the user to jump to the leaderboard to view the league table.
-**Game**, wWich will enable the user to go commence playing Jumble Jungle.
+**Game**, Which will enable the user to go commence playing Jumble Jungle.
 
 * The buttons are responsive and will fit all screens with any orientation. 
 * The navigation icons/buttons are easy to understand and allow the user to understand the different sections of the website/game which allows for a greater user experience.
@@ -95,7 +95,7 @@ The navigation buttons are easily identifiable and work with both a mouse click 
 ![Image of the leaderboard button](/workspace/Jumble-Jungle/assets/images/readme-images/leader-board-button-image.webp)
 ![Home Button](assets/images/readme-images/leaderboard.js-jshint.png)
 **Leaderboard Table**
-The leaderboard table is simpliestic and uses a local storage to add the name of the user who completes the game.
+The leaderboard table is simplistic  and uses a local storage to add the name of the user who completes the game.
 ![Image of the leaderboard with a winner listed in the leaderboard table](assets/images/readme-images/leaderboard-input-game-complete.png)
 **Background Image**
 The background is vibrant and displays apes on a pedistool to represent the winners of the game.
@@ -103,7 +103,7 @@ The background is vibrant and displays apes on a pedistool to represent the winn
 
 ### Game
 **Background Image**
-The game page allows users to figure out the different 8 letter anagramss which after testing different box sizes was found to allow the most user friendly dimensions. The background although colourful has a 3d overlay affect which doesn't distract users from the game. The background is also has lighter shades to allow the containers within the game to be distinguisable from the rest of the page.
+The game page allows users to figure out the different 8 letter anagrams which after testing different box sizes was found to allow the most user friendly dimensions. The background although colourful has a 3d overlay affect which doesn't distract users from the game. The background is also has lighter shades to allow the containers within the game to be distinguishable from the rest of the page.
 ![Background image for the game.index page](assets/images/readme-images/game.html-background.jpeg)
 **Help Overlay**
 The help overlay offers precise and condensed information that outlines the purpose of the game.
@@ -267,6 +267,8 @@ Below is a table showing various actions performed on the website including the 
 | Click delete button on the game page (both desktop and mobile device)                     | The inputs.letters should be removed (1 letter per touch/click)                                   | Letter(s) deleted                                      |
 | Touch letters using touch screen on the game page (both laptop and mobile device)         | The letter should go to the next available box within the box container                           | Letters move as they should                            |
 | Click, drag and drop letters on the game page (both desktop and mobile device)            | The user should be able to place the letters in any box                                           | Letters move as they should                            |
+| Click/touch close button on the help overlay (both desktop and mobile device)             | The help overlay should no longer be displayed                                                    | Help overlay not displayed                             |
+| Click/touch "X" on modal messages (both desktop and mobile device)                        | The hemodal messages should no longer be displayed                                                | Modal messages not displayed                           |
 
 ## Validator Testing
 
