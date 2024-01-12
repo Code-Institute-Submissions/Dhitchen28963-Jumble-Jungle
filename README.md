@@ -2,7 +2,7 @@
 ---
 ## Live link to website
 
-[La Citadelle] ADD LINK TO WEBSITE
+[La Citadelle] [Jumble Jungle](https://dhitchen28963.github.io/Jumble-Jungle/)
 
 ## Table of Contents
 <ol>
@@ -381,7 +381,7 @@ For the editing of images.
     *From the source section drop-down menu, select the Master Branch.
     *Once the master branch has been selected, the page provided the link to the completed website.
 
-The link can be found here - [Jumble Jungle]()
+The link can be found here - [Jumble Jungle](https://dhitchen28963.github.io/Jumble-Jungle/)
 
 ## Credits
 
